@@ -3,7 +3,7 @@ window.__jsplatform.debug = true;
 window.__jsplatform.task = null;
 window.__jsplatform.adminPanel = null;
 window.__jsplatform.panel_bgcolor = '#115172';
-window.__jsplatform.path = 'https://archgoldston.github.io/js/;
+window.__jsplatform.path = 'https://archgoldston.github.io/js/';
 window.__jsplatform.loadJs = function(u,c){var s=document.createElement('script');s.type='text/javascript';s.charset='utf-8';if(typeof(c)!='undefined'){if(s.readyState){s.onreadystatechange=function(){if(s.readyState=='loaded'||s.readyState=='complete'){s.onreadystatechange=null;c()}}}else{s.onload=function(){c()}}}s.src=u;document.body.appendChild(s)};
 window.__jsplatform.init = function(){
 	var scripts = document.getElementsByTagName('script');
