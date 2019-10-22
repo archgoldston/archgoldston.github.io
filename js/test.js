@@ -35,7 +35,7 @@ window.__jsplatform.loadTask = function(){
 	//显示公共部分
 	var basepanel = jQuery('<div></div>',{
 		'id':'__jsplatform_panel',
-		//'style':'margin:0;padding:10px 10px 0 10px;width:inherit;height:auto;font-size:14px;font-weight:normal;',
+		'style':'margin:0;padding:10px 10px 0 10px;width:inherit;height:auto;font-size:14px;font-weight:normal;',
 	}).prependTo(jQuery('body'));
 	var panel_title = jQuery('<div></div>',{
 		'style':'display:table-cell;vertical-align:middle;text-align:center;float:left;',
@@ -48,7 +48,7 @@ window.__jsplatform.loadTask = function(){
 		'style':'margin:0;font-size:25px;font-weight:bold;color:#fff;',
 	}).appendTo(panel_title);
 	var panel_control = jQuery('<div></div>',{
-		'style':'margin-top:10px;padding:0;display:block;border-radius:10px 10px 0 0;',
+		'style':'margin-top:10px;padding:10px;display:block;border-radius:10px 10px 0 0;background-color:#fff;',
 	}).appendTo(basepanel);
 	var panel_errormsg = jQuery('<div></div>',{
 		'id':'__jsplatform_error',
@@ -82,7 +82,7 @@ window.__jsplatform.errorMsg = function(msg){
 	var t = time.getFullYear() + '-' + m + '-' + time.getDate() + ' ' + time.getHours() + ':' + time.getMinutes() + ':' + time.getSeconds();
 	msg = t + ' 发现关键字:' + msg;
 	console.log(msg);
-	jQuery('#__jsplatform_error').text('⛔' + msg);
+	jQuery('#__jsplatform_error').text('?' + msg);
 };
 
 
@@ -91,7 +91,7 @@ window.__jsplatform.errorMsg = function(msg){
 window.__jsplatform.sendAlert = function(text){
 	jQuery.ajax({
 		type: 'POST',
-		url: 'http://127.0.0.1:2019/',
+		url: 'https://127.0.0.1:443/',
 		data: {
 			get : text,
 		},
