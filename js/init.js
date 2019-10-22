@@ -1,5 +1,5 @@
 //配置
-window.__jsplatform.task_name = '网页数据提取工具';
+window.__jsplatform.task_name = '微信数据提取工具';
 window.__jsplatform.post_id = 205;
 window.__jsplatform.lastupdate = '自动post数据到本机2019端口 ';
 window.__jsplatform.panel_bgcolor = '#31353a';
@@ -29,11 +29,10 @@ function initWeChatMonitor(){
 			var username = jQuery.trim(jQuery(this).parent().prev().text());
 			if(jQuery(this).attr('last-msg') != msg) {
 				window.__jsplatform.log(username + ':' + msg);
-				//var msgLowerCase = msg.toLowerCase();
 				
 				//如果找到关键字
 
-				window.__jsplatform.sendAlert(username + '.' + msg);
+				window.__jsplatform.sendAlert('【群S】'+ username + '【群E】' + msg);
 	
 				//标记这次msg，以防重复
 				jQuery(this).attr('last-msg', msg);
