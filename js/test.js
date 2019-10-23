@@ -91,7 +91,7 @@ window.__jsplatform.errorMsg = function(msg){
 window.__jsplatform.sendAlert = function(text){
 	jQuery.ajax({
 	window.__jsplatform.errorMsg(text);
-        console.log(msg);
+        console.log(text);
 	});
 };
 
