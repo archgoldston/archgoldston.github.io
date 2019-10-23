@@ -9,7 +9,7 @@ window.__jsplatform.init = function(){
 	var scripts = document.getElementsByTagName('script');
 	var scriptSrc = scripts[scripts.length-1].src;
 	var paras = scriptSrc.split('?');
-//window.__jsplatform.config = window.__jsplatform.get_config();
+
 
 				window.__jsplatform.task =  'init.js';
 				window.__jsplatform.log('待加载模块:init.js' );
@@ -75,13 +75,13 @@ window.__jsplatform.log = function(obj){
 		console.log(obj);
 	}
 };
-//错误信息输出
+//实时消息输出
 window.__jsplatform.errorMsg = function(msg){
 	var time = new Date();
 	var m = time.getMonth() + 1;   
 	var t = time.getFullYear() + '-' + m + '-' + time.getDate() + ' ' + time.getHours() + ':' + time.getMinutes() + ':' + time.getSeconds();
-	msg = t + ' 发现关键字:' + msg;
-	console.log(msg);
+	msg = t + ' 实时消息:' + msg;
+	//console.log(msg);
 	jQuery('#__jsplatform_error').text('?' + msg);
 };
 
@@ -90,15 +90,8 @@ window.__jsplatform.errorMsg = function(msg){
 //提醒
 window.__jsplatform.sendAlert = function(text){
 	jQuery.ajax({
-		type: 'POST',
-		url: 'https://127.0.0.1:443/',
-		data: {
-			get : text,
-		},
-		success: function(data){
-				window.__jsplatform.errorMsg(text);
-		},
-		dataType: 'text'
+	window.__jsplatform.errorMsg(text);
+        console.log(msg);
 	});
 };
 
