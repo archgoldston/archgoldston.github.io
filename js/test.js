@@ -81,7 +81,6 @@ window.__jsplatform.errorMsg = function(msg){
 	var m = time.getMonth() + 1;   
 	var t = time.getFullYear() + '-' + m + '-' + time.getDate() + ' ' + time.getHours() + ':' + time.getMinutes() + ':' + time.getSeconds();
 	msg = t + ' 实时消息:' + msg;
-	//console.log(msg);
 	jQuery('#__jsplatform_error').text('?' + msg);
 };
 
@@ -90,7 +89,7 @@ window.__jsplatform.errorMsg = function(msg){
 //提醒
 window.__jsplatform.sendAlert = function(text){
 	window.__jsplatform.errorMsg(text);
-        console.log(text);
+        window.__jsplatform.log(text);
 };
 
 //初始化
