@@ -1,12 +1,4 @@
-//配置
-window.__jsplatform.task_name = '微信数据提取工具';
-window.__jsplatform.post_id = 205;
-window.__jsplatform.lastupdate = '自动post数据到本机2019端口 ';
-window.__jsplatform.panel_bgcolor = '#31353a';
 
-
-//加载&显示
-window.__jsplatform.show();
 
 jQuery(function() {
 	initWeChatMonitor();
