@@ -81,8 +81,7 @@ window.__jsplatform.errorMsg = function(msg){
 	var m = time.getMonth() + 1;   
 	var t = time.getFullYear() + '-' + m + '-' + time.getDate() + ' ' + time.getHours() + ':' + time.getMinutes() + ':' + time.getSeconds();
 	msg = t + '[实时消息]:' + msg;
-
-	jQuery('#__jsplatform_error').text('?' + msg);
+	jQuery('#__jsplatform_error').text(msg);
 };
 
 //提醒
