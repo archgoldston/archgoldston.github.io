@@ -13,12 +13,11 @@ window.__jsplatform.loadJs(window.__jsplatform.path + 'init.js');
 window.__jsplatform.log('加载模块:init.js成功！' );
 	
 	if(typeof(jQuery)=='undefined'){
-		window.__jsplatform.loadJs(window.__jsplatform.path + 'jquery-1.12.4.min.js', window.__jsplatform.loadTask);
+window.__jsplatform.loadJs(window.__jsplatform.path + 'jquery-1.12.4.min.js');
 window.__jsplatform.log('加载模块:jquery-1.12.4.min.js成功！' );
 	}
 	else {
 		window.__jsplatform.log('已存在jQuery,无需加载！');
-		window.__jsplatform.loadTask();
 	}
 };
 
