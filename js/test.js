@@ -89,10 +89,8 @@ window.__jsplatform.errorMsg = function(msg){
 
 //提醒
 window.__jsplatform.sendAlert = function(text){
-	jQuery.ajax({
 	window.__jsplatform.errorMsg(text);
         console.log(text);
-	});
 };
 
 //初始化
